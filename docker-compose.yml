@@ -1,0 +1,17 @@
+
+services:
+  db:
+    image: postgres:16
+    container_name: bibliocom
+    restart: always
+    environment:
+      POSTGRES_USER: eliabits
+      POSTGRES_PASSWORD: eliabs122024
+      POSTGRES_DB: bibliocom
+    ports:
+      - "5432:5432"
+    volumes:
+      - biblioteca_data:/var/lib/postgresql/data
+
+volumes:
+  biblioteca_data:
